@@ -140,7 +140,7 @@ MAIN
     background-size: cover;
     background-blend-mode:screen;
     height: 100vh;
-    animation: bg-color 24s infinite;  /* @keyframes bg-color 설정해야 나옴. */
+    animation: bg-color 24s infinite;   /* @keyframes bg-color 설정해야 나옴. */
 
     display: flex;
     align-items: center;
@@ -248,7 +248,7 @@ CURRICULUM
 
 .content {
     padding-bottom: 1rem;
-    /* padding: 0 0 1rem 0; 위 오른쪽 아래 왼쪽 순서 */
+    /* padding: 0 0 1rem 0; */
 }
 
 
@@ -261,7 +261,7 @@ MENTORS
 
 .mentors-list {
     display: flex;
-    /* flex-direction: row-reverse; */
+    flex-direction: row-reverse;
     align-items: flex-start;
     margin-bottom: 2rem;
 }
