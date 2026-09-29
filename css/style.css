@@ -172,14 +172,28 @@ MAIN
     background-size: cover;
     background-blend-mode:screen;
     height: 100vh;
-    color: var(--grey); /* 다크 모드에서도 글자 어둡게 유지  */
+    color: var(--grey); 
 
-    animation: bg-color 24s infinite;   /* @keyframes bg-color 설정해야 나옴. */
+    animation: bg-color 24s infinite;   
 
     display: flex;
     align-items: center;
+    justify-content: center; /* [변경 1] 가로 방향으로도 정중앙에 정렬되도록 추가 */
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
 
+#main > div {
+    width: 100%;
+    max-width: 800px;  /* 다른 섹션(.wrapper)들과 동일하게 최대 너비를 맞춰 정돈해 줍니다 */
+    padding: 0 1.5rem; /* 화면이 아주 작아졌을 때 글자가 화면 테두리에 붙지 않도록 안쪽 여백 추가 */
+}
+
+@keyframes bg-color {
+}
+
+#main h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
 }
 
 @keyframes bg-color {
