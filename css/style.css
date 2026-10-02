@@ -170,15 +170,19 @@ MAIN
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-blend-mode:screen;
+    background-blend-mode: screen;
     height: 100vh;
-    color: var(--grey); 
+    color: var(--grey);
 
     animation: bg-color 24s infinite;   
 
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center; /* [변경 1] 가로 방향으로도 정중앙에 정렬되도록 추가 */
+    justify-content: center; 
+    
+    padding-bottom: 10vh; 
+    
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
@@ -320,10 +324,88 @@ CURRICULUM
     /* padding: 0 0 1rem 0; */
 }
 
+/* 3-2. 커리큘럼 메뉴 */
+.tab-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-bottom: 1.5rem;
+}
 
-/*
-MENTORS
-================================================ */
+.tab-btn {
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,.6);
+    border-radius: 999px;
+    padding: .5rem 1.25rem;
+    transition: .3s;
+}
+
+.tab-btn.active {
+    background: var(--white);
+    color: var(--green);
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+/* Gallery */
+
+#gallery {
+    padding: 4rem 1rem;
+}
+
+#gallery h2 {
+    background: linear-gradient(var(--pink), var(--purple));
+    background-clip: text;
+    color: rgba(255, 255, 255, 0);
+}
+
+.gallery-main {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.gallery-thumbs {
+    display: flex;
+    gap: .5rem;
+}
+
+.gallery-thumbs li {
+    flex: 1;
+}
+
+.gallery-thumbs img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 4px;
+    opacity: .5;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.gallery-thumbs img:hover,
+.gallery-thumbs img.active {
+    opacity: 1;
+}
+
+.gallery-thumbs img:active {
+    outline: 2px solid var(--Mint-Green);
+}
+
+/* mentors */
+
 #mentors {
     padding: 4rem 1rem;
 }
